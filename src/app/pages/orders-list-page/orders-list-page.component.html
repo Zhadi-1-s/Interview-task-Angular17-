@@ -1,0 +1,57 @@
+<div class="filter-bar">
+      <mat-form-field appearance="fill">
+        <mat-label>Статус</mat-label>
+        <mat-select [formControl]="statusFilter">
+          <mat-option value="">Все</mat-option>
+          <mat-option value="new">New</mat-option>
+          <mat-option value="processing">Processing</mat-option>
+          <mat-option value="done">Done</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Поиск по клиенту</mat-label>
+        <input matInput [formControl]="customerFilter" placeholder="Имя клиента">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Сортировка по сумме</mat-label>
+        <mat-select [formControl]="sortOrder">
+          <mat-option value="asc">По возрастанию</mat-option>
+          <mat-option value="desc">По убыванию</mat-option>
+        </mat-select>
+      </mat-form-field>
+</div>
+
+<table mat-table [dataSource]="(filteredOrders$ | async) ?? []" class="mat-elevation-z8">
+      <ng-container matColumnDef="number">
+        <th mat-header-cell *matHeaderCellDef>Номер</th>
+        <td mat-cell *matCellDef="let order">{{ order.number }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="customer">
+        <th mat-header-cell *matHeaderCellDef>Клиент</th>
+        <td mat-cell *matCellDef="let order">{{ order.customerName }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="status">
+        <th mat-header-cell *matHeaderCellDef>Статус</th>
+        <td mat-cell *matCellDef="let order">{{ order.status }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="total">
+        <th mat-header-cell *matHeaderCellDef>Сумма</th>
+        <td mat-cell *matCellDef="let order">{{ order.total | currency:'KZT' }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="date">
+        <th mat-header-cell *matHeaderCellDef>Дата</th>
+        <td mat-cell *matCellDef="let order">{{ order.createdAt | date:'short' }}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+<mat-paginator [length]="totalOrders" [pageSize]="pageSize" (page)="onPageChange($event)">
+</mat-paginator>

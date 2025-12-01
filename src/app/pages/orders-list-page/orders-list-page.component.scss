@@ -1,0 +1,65 @@
+/* Общий контейнер фильтров */
+.filter-bar {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+  align-items: center;
+}
+
+/* Мат-фильтры */
+mat-form-field {
+  width: 200px;
+
+  input {
+    padding: 8px;
+  }
+}
+
+/* Таблица */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 16px;
+
+  th {
+    background-color: #f3f3f3;
+    color: #333;
+    font-weight: 600;
+    text-align: left;
+    padding: 12px;
+  }
+
+  td {
+    padding: 12px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  tr.mat-header-row {
+    height: 56px;
+  }
+
+  tr.mat-row:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+    cursor: pointer;
+  }
+}
+
+/* Пагинатор */
+mat-paginator {
+  margin-top: 8px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Для маленьких экранов */
+@media (max-width: 768px) {
+  .filter-bar {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  mat-form-field {
+    width: 100%;
+  }
+}

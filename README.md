@@ -11,8 +11,6 @@ SPA-приложение для менеджеров интернет-магаз
 - JSON Server для локального API
 
 ## Установка и запуск
-
-### 1. Клонировать репозиторий
 ```bash
 git clone https://github.com/Zhadi-1-s/Interview-task-Angular17-.git
 cd orders-dashboard
@@ -73,7 +71,7 @@ src/
  ├─ environments/
  └─ main.ts
 
-Особенности
+##Особенности
 
 Таблица заказов с фильтрацией, сортировкой и пагинацией
 

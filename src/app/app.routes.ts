@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 import { LoginComponent } from './pages/login/login.component';
 import { OrdersListPageComponent } from './pages/orders-list-page/orders-list-page.component';
-import { OrderDetailPageComponent } from './pages/order-detail-page/order-detail-page.component';
+import { OrdersDetailPageComponent } from './pages/orders-detail-page/orders-detail-page.component';
 import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
 import { authGuard } from './core/guards/auth.guard';
 export const routes: Routes = [
@@ -14,7 +14,7 @@ export const routes: Routes = [
     },
     {
         path: 'orders/:id',
-        component: OrderDetailPageComponent,
+        component: OrdersDetailPageComponent,
         canActivate: [authGuard],
     },
     { path: '**', component: NotFoundPageComponent },

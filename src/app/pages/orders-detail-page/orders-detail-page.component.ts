@@ -92,7 +92,17 @@ export class OrdersDetailPageComponent {
   }
 
   addItem() {
-    this.items.push(this.buildItem({ productId: this.products[0].id, qty: 1, price: 0 }));
+    const newItem = this.buildItem({
+      productId: this.products[0].id,
+      qty: 1,
+      price: 0
+    });
+
+    this.items.push(newItem);
+
+    newItem.valueChanges.subscribe(() => this.updateTotal());
+
+    this.updateTotal();
   }
 
   removeItem(index: number) {

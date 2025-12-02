@@ -11,7 +11,7 @@ import { OrdersService } from '../../core/services/order/order.service';
 import { Order } from '../../core/interfaces/order.interface';
 import { MatSortModule } from '@angular/material/sort';
 import { Subject } from 'rxjs';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-orders-list-page',
@@ -24,7 +24,8 @@ import { ActivatedRoute, Router } from '@angular/router';
     MatSelectModule,
     MatInputModule,
     MatButtonModule,
-    MatSortModule],
+    MatSortModule,
+    RouterLink],
   templateUrl: './orders-list-page.component.html',
   styleUrl: './orders-list-page.component.scss'
 })
@@ -51,7 +52,7 @@ export class OrdersListPageComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit() {
-    // Получаем параметры из URL и устанавливаем значения фильтров без триггера событий
+  
     this.route.queryParams
       .pipe(takeUntil(this.destroy$))
       .subscribe(params => {

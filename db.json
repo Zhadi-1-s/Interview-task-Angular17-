@@ -1,23 +1,231 @@
 {
   "products": [
-    { "id": 1, "sku": "P-001", "title": "Ноутбук", "price": 120000, "stock": 5, "updatedAt": "2025-08-01T10:00:00Z" },
-    { "id": 2, "sku": "P-002", "title": "Мышь", "price": 5000, "stock": 20, "updatedAt": "2025-08-10T12:00:00Z" },
-    { "id": 3, "sku": "P-003", "title": "Клавиатура", "price": 15000, "stock": 15, "updatedAt": "2025-08-05T11:00:00Z" },
-    { "id": 4, "sku": "P-004", "title": "Монитор", "price": 60000, "stock": 7, "updatedAt": "2025-08-12T09:00:00Z" },
-    { "id": 5, "sku": "P-005", "title": "Наушники", "price": 8000, "stock": 30, "updatedAt": "2025-08-08T14:00:00Z" }
+    {
+      "id": 1,
+      "sku": "P-001",
+      "title": "Ноутбук",
+      "price": 120000,
+      "stock": 5,
+      "updatedAt": "2025-08-01T10:00:00Z"
+    },
+    {
+      "id": 2,
+      "sku": "P-002",
+      "title": "Мышь",
+      "price": 5000,
+      "stock": 20,
+      "updatedAt": "2025-08-10T12:00:00Z"
+    },
+    {
+      "id": 3,
+      "sku": "P-003",
+      "title": "Клавиатура",
+      "price": 15000,
+      "stock": 15,
+      "updatedAt": "2025-08-05T11:00:00Z"
+    },
+    {
+      "id": 4,
+      "sku": "P-004",
+      "title": "Монитор",
+      "price": 60000,
+      "stock": 7,
+      "updatedAt": "2025-08-12T09:00:00Z"
+    },
+    {
+      "id": 5,
+      "sku": "P-005",
+      "title": "Наушники",
+      "price": 8000,
+      "stock": 30,
+      "updatedAt": "2025-08-08T14:00:00Z"
+    }
   ],
   "orders": [
-    { "id": 1, "number": "ORD-001", "customerName": "Иван Иванов", "status": "new", "items": [{ "productId": 1, "qty": 1, "price": 120000 }], "total": 120000, "createdAt": "2025-08-15T08:00:00Z" },
-    { "id": 2, "number": "ORD-002", "customerName": "Пётр Петров", "status": "processing", "items": [{ "productId": 2, "qty": 2, "price": 5000 }], "total": 10000, "createdAt": "2025-08-16T09:30:00Z" },
-    { "id": 3, "number": "ORD-003", "customerName": "Сергей Сидоров", "status": "done", "items": [{ "productId": 3, "qty": 1, "price": 15000 }], "total": 15000, "createdAt": "2025-08-17T10:15:00Z" },
-    { "id": 4, "number": "ORD-004", "customerName": "Мария Смирнова", "status": "new", "items": [{ "productId": 4, "qty": 1, "price": 60000 }], "total": 60000, "createdAt": "2025-08-18T11:20:00Z" },
-    { "id": 5, "number": "ORD-005", "customerName": "Алексей Кузнецов", "status": "processing", "items": [{ "productId": 5, "qty": 2, "price": 8000 }], "total": 16000, "createdAt": "2025-08-19T12:10:00Z" },
-    { "id": 6, "number": "ORD-006", "customerName": "Елена Павлова", "status": "done", "items": [{ "productId": 1, "qty": 1, "price": 120000 }], "total": 120000, "createdAt": "2025-08-20T13:00:00Z" },
-    { "id": 7, "number": "ORD-007", "customerName": "Игорь Волков", "status": "new", "items": [{ "productId": 2, "qty": 1, "price": 5000 }], "total": 5000, "createdAt": "2025-08-21T14:30:00Z" },
-    { "id": 8, "number": "ORD-008", "customerName": "Наталья Орлова", "status": "processing", "items": [{ "productId": 3, "qty": 2, "price": 15000 }], "total": 30000, "createdAt": "2025-08-22T15:45:00Z" },
-    { "id": 9, "number": "ORD-009", "customerName": "Владимир Михайлов", "status": "done", "items": [{ "productId": 4, "qty": 1, "price": 60000 }], "total": 60000, "createdAt": "2025-08-23T16:50:00Z" },
-    { "id": 10, "number": "ORD-010", "customerName": "Ольга Фёдорова", "status": "new", "items": [{ "productId": 5, "qty": 1, "price": 8000 }], "total": 8000, "createdAt": "2025-08-24T17:05:00Z" },
-    { "id": 11, "number": "ORD-011", "customerName": "Дмитрий Беляев", "status": "processing", "items": [{ "productId": 1, "qty": 1, "price": 120000 }], "total": 120000, "createdAt": "2025-08-25T18:20:00Z" },
-    { "id": 12, "number": "ORD-012", "customerName": "Татьяна Иванова", "status": "done", "items": [{ "productId": 2, "qty": 3, "price": 5000 }], "total": 15000, "createdAt": "2025-08-26T19:30:00Z" }
+    {
+      "id": 1,
+      "number": "ORD-001",
+      "customerName": "Иван Иванов",
+      "status": "new",
+      "items": [
+        {
+          "productId": 1,
+          "qty": 1,
+          "price": 120000
+        }
+      ],
+      "total": 120000,
+      "createdAt": "2025-08-15T08:00:00Z"
+    },
+    {
+      "id": 2,
+      "number": "ORD-002",
+      "customerName": "Пётр Петров",
+      "status": "processing",
+      "items": [
+        {
+          "productId": 2,
+          "qty": 2,
+          "price": 5000
+        }
+      ],
+      "total": 10000,
+      "createdAt": "2025-08-16T09:30:00Z"
+    },
+    {
+      "id": 3,
+      "number": "ORD-003",
+      "customerName": "Сергей Сидоров",
+      "status": "done",
+      "items": [
+        {
+          "productId": 3,
+          "qty": 1,
+          "price": 15000
+        }
+      ],
+      "total": 15000,
+      "createdAt": "2025-08-17T10:15:00Z"
+    },
+    {
+      "id": 4,
+      "number": "ORD-004",
+      "customerName": "Мария Смирнова",
+      "status": "new",
+      "items": [
+        {
+          "productId": 4,
+          "qty": 1,
+          "price": 60000
+        }
+      ],
+      "total": 60000,
+      "createdAt": "2025-08-18T11:20:00Z"
+    },
+    {
+      "id": 5,
+      "number": "ORD-005",
+      "customerName": "Алексей Кузнецов",
+      "status": "processing",
+      "items": [
+        {
+          "productId": 5,
+          "qty": 2,
+          "price": 8000
+        }
+      ],
+      "total": 16000,
+      "createdAt": "2025-08-19T12:10:00Z"
+    },
+    {
+      "id": 6,
+      "number": "ORD-006",
+      "customerName": "Елена Павлова",
+      "status": "done",
+      "items": [
+        {
+          "productId": 1,
+          "qty": 1,
+          "price": 120000
+        }
+      ],
+      "total": 120000,
+      "createdAt": "2025-08-20T13:00:00Z"
+    },
+    {
+      "id": 7,
+      "number": "ORD-007",
+      "customerName": "Игорь Волков",
+      "status": "new",
+      "items": [
+        {
+          "productId": 2,
+          "qty": 1,
+          "price": 5000
+        },
+        {
+          "productId": 1,
+          "qty": 1,
+          "price": 3000
+        }
+      ],
+      "total": 5300,
+      "createdAt": "2025-08-21T14:30:00Z"
+    },
+    {
+      "id": 8,
+      "number": "ORD-008",
+      "customerName": "Наталья Орлова",
+      "status": "processing",
+      "items": [
+        {
+          "productId": 3,
+          "qty": 2,
+          "price": 15000
+        }
+      ],
+      "total": 30000,
+      "createdAt": "2025-08-22T15:45:00Z"
+    },
+    {
+      "id": 9,
+      "number": "ORD-009",
+      "customerName": "Владимир Михайлов",
+      "status": "done",
+      "items": [
+        {
+          "productId": 4,
+          "qty": 1,
+          "price": 60000
+        }
+      ],
+      "total": 60000,
+      "createdAt": "2025-08-23T16:50:00Z"
+    },
+    {
+      "id": 10,
+      "number": "ORD-010",
+      "customerName": "Ольга Фёдорова",
+      "status": "new",
+      "items": [
+        {
+          "productId": 5,
+          "qty": 1,
+          "price": 8000
+        }
+      ],
+      "total": 8000,
+      "createdAt": "2025-08-24T17:05:00Z"
+    },
+    {
+      "id": 11,
+      "number": "ORD-011",
+      "customerName": "Дмитрий Беляев",
+      "status": "processing",
+      "items": [
+        {
+          "productId": 1,
+          "qty": 1,
+          "price": 120000
+        }
+      ],
+      "total": 120000,
+      "createdAt": "2025-08-25T18:20:00Z"
+    },
+    {
+      "id": 12,
+      "number": "ORD-012",
+      "customerName": "Татьяна Иванова",
+      "status": "done",
+      "items": [
+        {
+          "productId": 2,
+          "qty": 3,
+          "price": 5000
+        }
+      ],
+      "total": 15000,
+      "createdAt": "2025-08-26T19:30:00Z"
+    }
   ]
 }
